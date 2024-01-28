@@ -1,0 +1,156 @@
+span.popupText {
+    font-size: 18px;
+    letter-spacing: -0.25px;
+    line-height: 20px;
+    word-spacing: 0;
+  }
+  
+  #calender {
+    position: absolute;
+    bottom: 100px;
+    left: 10px;
+    z-index: 10000;
+    width: 90px;
+  }
+  
+  #calender input[type="text"] {
+    width: 100%; /* Make the input take up the full width */
+    padding: 10px; /* Add padding to the input */
+    margin-top: 10px; /* Add space between the input and the border */
+    box-sizing: border-box; /* Include padding and border in the input's total width */
+    border: 1px solid #ddd; /* Add a border to the input */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    color: #111;
+    font-weight: 700;
+  }
+  
+  #calender input[type="text"]:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow on focus */
+  }
+  
+  
+  #timeline {
+    position: absolute;
+    bottom: 20px;
+    left: 300px;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+    border-radius: 15px;
+  }
+  
+  #timeline input[type="range"] {
+    width: 800px; /* 设置滑动条的长度 */
+
+  }
+  
+
+  #timeline  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+    border-radius: 50px;
+    background: #ffc600; /*和进度条的填充部分一个颜色*/
+    cursor: pointer;
+    margin-top: -3.5px;
+    box-shadow:0 0 2px rgba(0,0,0,0.2);
+  }
+
+
+  #timeline input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    border-radius: 3.3px;
+  }
+  
+
+
+  .tooltip {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    z-index: 10000;
+    width: 150px;
+    font-weight: 500;
+  }
+
+  .tooltip::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #3498db transparent transparent transparent;
+    z-index: 10000;
+  }
+
+  .ticks {
+    position: relative;
+    height: 24px;
+  }
+  
+  .ticks span::before {
+    content: '\00a0'; /* 使用Unicode表示的空格字符 */
+  }
+  
+
+  .ticks span {
+    position: absolute;
+    margin-top: 6px;
+    left: 0;
+    width: 1px;
+    height: 8px;
+    background: #ddd;
+    white-space: nowrap ;
+  }
+  
+  .ticks span:nth-child(1) {
+    left: calc(0% + 2px);
+  }
+  .ticks span:nth-child(2) {
+    left: calc(14.3% + 7px);
+  }
+  
+  .ticks span:nth-child(3) {
+    left: calc(28.6% + 3px);
+  }
+  
+  .ticks span:nth-child(4) {
+    left: calc(42.9% + 1px);
+  }
+  
+  .ticks span:nth-child(5) {
+    left: calc(57.2% - 2px);
+  }
+  
+  .ticks span:nth-child(6) {
+    left: calc(71.5% - 5px);
+  }
+  
+  .ticks span:nth-child(7) {
+    left: calc(85.8% - 8px);
+  }
+  
+
+  .leaflet-control-colorBar-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: large;
+  }
+  

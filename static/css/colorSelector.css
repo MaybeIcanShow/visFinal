@@ -1,0 +1,91 @@
+#colorBarDiv{
+  position: absolute;
+  left :12px;
+  bottom: 140px;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+#colorBar{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#windDomain{
+	background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+
+#colorSelectorPanel {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 600px;
+	height: 350px;
+	z-index: 10001;
+	border-radius: 5px; /* 添加圆角以使按钮更加方形 */
+
+}
+
+  #colorSelectorDiv {
+	position: absolute;
+	top: 60px; /* 例如，向下移动20像素 */
+	left: 180px; /* 例如，向左移动10像素 */
+	  background-color: rgba(255, 255, 255, 0.5);
+
+  }
+
+#colorBarSelectorDiv{
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 150px;
+	height: 350px;
+}
+
+#seaWind{
+	color: black;
+	font-weight: 500;
+}
+
+#closeSelector {
+	position: absolute;
+	right: 0; /* 调整右边距离 */
+	top: 0; /* 调整上边距离 */
+	background-color: rgba(255, 0, 0, 0.5); /* 红色背景 */
+	color: #fff; /* 白色文字 */
+	border: none; /* 移除按钮边框 */
+	padding: 8px 12px; /* 调整内边距 */
+	cursor: pointer; /* 鼠标指针样式 */
+	font-size: 14px; /* 调整字体大小 */
+	border-radius: 5px; /* 添加圆角以使按钮更加方形 */
+}
+
+#closeSelector:hover {
+	background-color: #cc0000; /* 鼠标悬停时的背景颜色 */
+}
+
+
+#seaWindInPanel{
+	color: black;
+	font-weight: 700;
+
+}
+
+#clearColor {
+	background-color: #ffae00;
+	color: #ffffff;
+	padding: 8px 12px; /* 调整内边距 */
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-weight: 500;
+}

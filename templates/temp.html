@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上传文件</title>
+  <style>
+    #uploadBtn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #uploadBtn:hover {
+      background-color: #0056b3;
+    }
+    #fileInput {
+      display: none;
+    }
+    #uploadWindow {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f8f9fa;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 20px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+<button id="uploadBtn" onclick="showUploadWindow()">上传文件</button>
+
+<div id="uploadWindow">
+  <h3>选择文件进行上传</h3>
+  <input type="file" id="fileInput" multiple accept=".txt, .pdf">
+  <button onclick="uploadFiles()">上传</button>
+</div>
+
+<script>
+  function showUploadWindow() {
+    document.getElementById('uploadWindow').style.display = 'block';
+  }
+
+  function uploadFiles() {
+    var files = document.getElementById('fileInput').files;
+    if (files.length > 0) {
+      // Do something with the uploaded files
+      console.log("已上传文件数：" + files.length);
+      for (var i = 0; i < files.length; i++) {
+        console.log("文件名: " + files[i].name);
+      }
+      // You can add your upload logic here
+      // For demonstration, I'm just hiding the upload window
+      document.getElementById('uploadWindow').style.display = 'none';
+    } else {
+      alert("请至少选择一个文件进行上传。");
+    }
+  }
+</script>
+
+</body>
+</html>

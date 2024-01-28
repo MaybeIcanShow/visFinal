@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../static/css/leaflet.css" />
+    <link rel="stylesheet" href="../static/css/example.css" />
+<!--    <link rel="stylesheet" href="../static/css/calendarAndTimeline.css" />-->
+    <link rel="stylesheet" href="../static/css/colorSelector.css">
+<!--    <link-->
+<!--            rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />-->
+<!--    <link-->
+<!--            rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css"/>-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet"/>
+    <link rel="stylesheet" href="../static/css/spectrum.css">
+
+    <title>智科2102郑宝炜</title>
+</head>
+<body>
+<h1 class="title mapTitle">郑宝炜可视化第四次作业</h1>
+<div id="map"></div>
+<div class="chat-container" id="chat-container">
+    <h2 class="chat-title">AI 机器人</h2>
+    <button class="close-btn" onclick="toggleChat()">X</button>
+    <div class="chat-box" id="chat-box"></div>
+    <input type="text" id="message-input" placeholder="Type a message...">
+    <button class="send-btn" onclick="sendMessage()">Send</button>
+</div>
+<div id="floating-panel">
+    <!--      <li>-->
+    <button  onclick="toggleChat()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../static/img/chat.png" alt="" style="width: 13px;height: 13px;">AI助手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    <!--      </li>-->
+    <hr>
+    <ul>
+
+        <li>
+            <label>矢量宽度</label>
+            <input id="width" type="range" min="0" max="5" step="0.2" value="0.8" />
+        </li>
+        <li>
+            <label>矢量颜色</label>
+            <input id="color" type="color" value="#ffffff"/>
+        </li>
+        <li>
+            <label>矢量速度</label>
+            <input id="velocityScale" type="range" min="200" max="1000" value="600" style="transform: rotateY(180deg)" step="10"/>
+        </li>
+        <li>
+            <label>矢量透明度</label>
+            <input id="opacity" type="range" min="0" max="1" value="1" step="0.1" />
+        </li>
+        <li>
+            <label>热力图透明度</label>
+            <input id="magnitude_opacity" type="range" min="0" max="1" value="0.6" step="0.1"/>
+        </li>
+    </ul>
+</div>
+<!--<div id="calender">-->
+<!--    <input type="text" id="datepicker" placeholder="2023-07-04" />-->
+<!--</div>-->
+
+<div id="timeline">
+    <input type="range" min="1688169600000" max="1688774400000" value="1688428800000" step="21600000" id="timeRange"/>
+    <div class="tooltip" id="tooltip"></div>
+    <div class="ticks" id="week">
+        <span>07-01</span>
+        <span>07-02</span>
+        <span>07-03</span>
+        <span>07-04</span>
+        <span>07-05</span>
+        <span>07-06</span>
+        <span>07-07</span>
+    </div>
+</div>
+
+<div id="colorBarDiv">
+    <div id="seaWind">海风: m/s</div>
+    <canvas id="colorBar" width="20" height="200"></canvas>
+    <canvas id="windDomain" width="50" height="200"></canvas>
+</div>
+
+<div id="colorSelectorPanel" display="none">
+    <button id="closeSelector">close</button>
+    <buttton id="clearColor">clear</buttton>
+    <div id="colorBarSelectorDiv">
+        <div id="seaWindInPanel">海风: m/s</div>
+        <canvas id="colorBarInPanel" width="50" height="300"></canvas>
+        <canvas id="windDomainInPanel" width="80" height="300"></canvas>
+    </div>
+    <div id="colorSelectorDiv">
+        <input type="text" id="colorSelector">
+    </div>
+</div>
+
+<script src="../static/js/jequry.js"></script>
+<script src="//d3js.org/d3.v5.min.js"></script>
+<script src="//npmcdn.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+<script src="../static/js/leaflet.canvaslayer.fied.js"></script>
+<!--<script src="../static/js/map.js"></script>-->
+<script src="../static/js/upload.js" ></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>-->
+<script src="../static/js/spectrum.js"></script>
+<!--<script src="../static/js/calendarAndTimeline.js"></script>-->
+<script src="../static/js/colorSelector.js"></script>
+<script src="../static/js/chat.js"></script>
+</body>
+</html>
